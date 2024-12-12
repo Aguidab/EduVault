@@ -13,7 +13,7 @@
             color: #333;
         }
         header {
-            background: linear-gradient(135deg, #4A90E2, #50B3E9);
+            background: linear-gradient(135deg, #6A0DAD, #8A2BE2);
             color: white;
             padding: 20px;
             text-align: center;
@@ -22,7 +22,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background: #2C3E50;
+            background: #4B0082;
             padding: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -35,7 +35,7 @@
             transition: background 0.3s, color 0.3s;
         }
         nav a:hover {
-            background: #4A90E2;
+            background: #6A0DAD;
             color: #fff;
             border-radius: 5px;
         }
@@ -51,7 +51,7 @@
         }
         .hero {
             text-align: center;
-            background: linear-gradient(to bottom right, #4A90E2, #50B3E9);
+            background: linear-gradient(to bottom right, #6A0DAD, #8A2BE2);
             color: white;
             padding: 50px 20px;
             border-radius: 10px;
@@ -66,7 +66,7 @@
             margin: 10px 0 20px;
         }
         .hero button {
-            background: #50B3E9;
+            background: #8A2BE2;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -76,22 +76,28 @@
             transition: background 0.3s;
         }
         .hero button:hover {
-            background: #357ABD;
+            background: #4B0082;
         }
         footer {
             text-align: center;
-            background: #2C3E50;
+            background: #4B0082;
             color: white;
             padding: 15px 0;
             margin-top: 20px;
         }
         footer a {
-            color: #50B3E9;
+            color: #8A2BE2;
             text-decoration: none;
             margin: 0 10px;
         }
         footer a:hover {
             text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -101,7 +107,7 @@
         <p>Your Gateway to Customized Scholarships</p>
     </header>
     <nav>
-        <a href="#home">Home</a>
+        <a href="index.html">Home</a>
         <a href="#about">About Us</a>
         <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
@@ -110,7 +116,8 @@
         <section class="hero" id="home">
             <h1>Welcome to EduVault</h1>
             <p>We connect students with customized scholarships tailored to their unique needs and aspirations.</p>
-            <button onclick="alert('Feature Coming Soon!')">Get Started</button>
+            <img src="https://i0.wp.com/freedom.to/blog/wp-content/uploads/2022/09/pexels-charlotte-may-5965839.jpeg?w=1280&ssl=1" alt="Scholarships Image">
+            <button onclick="window.location.href='signup.html'">Get Started</button>
         </section>
         <section id="about">
             <h2>About Us</h2>
@@ -121,8 +128,8 @@
     <footer>
         <p>&copy; 2024 EduVault. All rights reserved. | <a href="#about">About</a> | <a href="#contact">Contact</a></p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
+
 
 
