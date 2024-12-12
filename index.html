@@ -19,11 +19,32 @@
             text-align: center;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
         }
-        main {
+        nav {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 80vh;
+            background-color: #357ABD;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .centered {
             text-align: center;
         }
         footer {
@@ -47,6 +68,11 @@
         button:hover {
             background-color: #357ABD;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -54,15 +80,52 @@
         <h1>EduVault</h1>
         <p>Shifting the Way Students Access Financial Aid</p>
     </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#login">Login</a>
+        <a href="#signup">Sign Up</a>
+    </nav>
     <main>
-        <div>
+        <section id="home" class="centered">
             <h2>Welcome to EduVault</h2>
             <p>We connect students with customized scholarships tailored to their unique needs.</p>
             <button onclick="alert('Feature Coming Soon!')">Start Now</button>
-        </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>EduVault is dedicated to helping students reduce financial stress by connecting them to funding opportunities they might otherwise miss. We believe in equitable access to education and financial literacy.</p>
+            <img src="https://via.placeholder.com/600x300" alt="Scholarship Opportunities">
+        </section>
+
+        <section id="login" class="centered">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="signup" class="centered">
+            <h2>Sign Up</h2>
+            <form>
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
     </main>
     <footer>
         &copy; 2024 EduVault. All rights reserved.
     </footer>
 </body>
 </html>
+
