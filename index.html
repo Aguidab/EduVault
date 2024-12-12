@@ -13,15 +13,18 @@
             color: #333;
         }
         header {
-            background: #6200ea;
+            background: #4A90E2;
             color: #fff;
             padding: 20px;
             text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
         }
         main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            text-align: center;
         }
         footer {
             background: #333;
@@ -33,7 +36,7 @@
             width: 100%;
         }
         button {
-            background-color: #6200ea;
+            background-color: #4A90E2;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -42,19 +45,21 @@
             border-radius: 5px;
         }
         button:hover {
-            background-color: #3700b3;
+            background-color: #357ABD;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to EduVault</h1>
-        <p>Your gateway to scholarships tailored to your university!</p>
+        <h1>EduVault</h1>
+        <p>Shifting the Way Students Access Financial Aid</p>
     </header>
     <main>
-        <h2>How It Works</h2>
-        <p>EduVault helps college students find custom scholarships tailored to their specific universities, majors, and interests.</p>
-        <button onclick="alert('This feature is coming soon!')">Start Searching</button>
+        <div>
+            <h2>Welcome to EduVault</h2>
+            <p>We connect students with customized scholarships tailored to their unique needs.</p>
+            <button onclick="alert('Feature Coming Soon!')">Start Now</button>
+        </div>
     </main>
     <footer>
         &copy; 2024 EduVault. All rights reserved.
