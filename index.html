@@ -99,6 +99,43 @@
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+        .scholarships-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .scholarships-list li {
+            background: #eaeaea;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .search-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .search-container input {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-container button {
+            padding: 10px 20px;
+            background: #8A2BE2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .search-container button:hover {
+            background: #4B0082;
+        }
     </style>
 </head>
 <body>
@@ -109,6 +146,7 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="#about">About Us</a>
+        <a href="#scholarships">Scholarships</a>
         <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
     </nav>
@@ -122,14 +160,55 @@
         <section id="about">
             <h2>About Us</h2>
             <p>EduVault is a platform built to simplify the financial aid journey for students. Created by <strong>Aguida Bangoura</strong>, a fourth-year Computer Science student at American University, our mission is to make education accessible and equitable for all.</p>
-            <p>With a focus on user-friendly tools and personalized scholarship matching, EduVault is here to transform how students discover and secure financial aid opportunities. Join us in creating a future where every student has the resources to succeed.</p>
+            <p>With a focus on user-friendly tools and personalized scholarship matching, EduVault is here to transform how students discover and secure financial aid opportunities. In the future, EduVault aims to integrate with EagleService, enabling personalized scholarship recommendations based on students' financial debt data and providing a tailored approach to reducing financial burdens.</p>
+        </section>
+        <section id="scholarships">
+            <h2>Scholarships for 2024</h2>
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search for scholarships...">
+                <button onclick="filterScholarships()">Search</button>
+            </div>
+            <div class="scholarships-list" id="scholarshipList">
+                <ul>
+                    <li>
+                        <strong>STEM Scholars Program</strong><br>
+                        Amount: $10,000<br>
+                        Eligibility: Students pursuing STEM fields<br>
+                        Deadline: March 15, 2024
+                    </li>
+                    <li>
+                        <strong>Future Leaders Scholarship</strong><br>
+                        Amount: $5,000<br>
+                        Eligibility: Undergraduate students in leadership programs<br>
+                        Deadline: April 1, 2024
+                    </li>
+                    <li>
+                        <strong>Community Service Award</strong><br>
+                        Amount: $2,500<br>
+                        Eligibility: Students with outstanding community service records<br>
+                        Deadline: February 28, 2024
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 EduVault. All rights reserved. | <a href="#about">About</a> | <a href="#contact">Contact</a></p>
     </footer>
+    <script>
+        function filterScholarships() {
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            const scholarships = document.querySelectorAll('.scholarships-list li');
+            scholarships.forEach(scholarship => {
+                const text = scholarship.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    scholarship.style.display = '';
+                } else {
+                    scholarship.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
-
-
 
